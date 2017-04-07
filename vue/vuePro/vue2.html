@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+    <div id="example">
+      a={{ a }}, b={{ b }}
+    </div>
+    <script>
+    var vm = new Vue({
+      el:'#example',
+      data:{
+        a:0.19
+      },
+      computed:{
+         b:function(){
+             var c = 1 - this.a;
+             var d = 1.01
+             return (Math.pow(this.a,3)*c*10*8*d + Math.pow(c,3)*this.a*10*7*d+
+             Math.pow(c,4)*this.a*5*6*d + Math.pow(c,5)*5*d)*(this.a*2+c)*d
+         }
+      }
+    })
+    </script>
+    </body>
+</html>

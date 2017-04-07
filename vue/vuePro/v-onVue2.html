@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+      <div id="example-2" v-on:click.self="doThat($event)">
+      <button v-on:click="say($event)">Submit</button>
+      <input type="text" v-on:keyup.up="submit">
+      </div>
+       <script>
+         new Vue({
+            el: '#example-2',
+            methods: {
+               say:  function(msg,event) {
+                  console.log(event);
+                  event.preventDefault();
+               },
+               doThat: function(event){
+                   console.log(event);
+               },
+               submit:function(){
+                  console.log(1);
+               }
+            }
+         })
+       </script>
+    </body>
+</html>

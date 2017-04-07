@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/vue.js"></script>
+        <style>
+          li{
+            list-style: none;
+          }
+        </style>
+    </head>
+    <body>
+    <div id="num">
+      <span v-for="n in object">{{ n }} </span>
+    </div>
+    <script>
+    new Vue({
+      el: '#num',
+      data: {
+        object: 20
+      }
+    })o
+    </script>
+    </body>
+</html>

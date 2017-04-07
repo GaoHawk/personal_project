@@ -1,0 +1,11 @@
+{
+  "name": "vuePro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GaoHawk/vueProject.git",
+  "author": "LS--20160803ISH\\Administrator <897622361@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue-amap": "^0.0.8"
+  }
+}
