@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .grid{
+      display: flex;
+    }
+    .grid-cell{
+      flex: 1;
+    }
+    .grid-cell.col-1 { flex: 0 0 8.33333%; }
+    .grid-cell.col-2 { flex: 0 0 16.66667%; }
+    .grid-cell.col-3 { flex: 0 0 25%; }
+    .grid-cell.col-4 { flex: 0 0 33.33333%; }
+    .grid-cell.col-5 { flex: 0 0 41.66667%; }
+    .grid-cell.col-6 { flex: 0 0 50%; }
+    .grid-cell.col-7 { flex: 0 0 58.33333%;}
+    .grid-cell.col-8 { flex: 0 0 66.66667%;}
+    .grid-cell.col-9 { flex: 0 0 75%;}
+    .grid-cell.col-10{ flex: 0 0 83.33333%;}
+    .grid-cell.col-11{ flex: 0 0 91.66667%;}
+    .grid-cell.col-11{ flex: 0 0 100%;}
+
+
+  </style>
+</head>
+<body>
+<div class="grid">
+  <div class="grid-cell">
+    <div class="demo">1</div>
+  </div>
+</div>
+<div class="grid">
+  <div class="grid-cell">
+    <div class="demo">1/2</div>
+  </div>
+  <div class="grid-cell">
+    <div class="demo">1/2</div>
+  </div>
+</div>
+<div class="grid">
+    <div class="grid-cell col-1">
+        <div class="demo">
+             <div class="grid">
+                <div class="grid-cell">
+                    <div class="demo">Nested</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-cell col-3">
+        <div class="demo">3/12</div>
+    </div>
+    <div class="grid-cell">
+        <div class="demo">auto</div>
+    </div>
+</div>
+
+</body>
+</html>

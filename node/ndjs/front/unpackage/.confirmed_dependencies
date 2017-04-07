@@ -1,0 +1,9 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"image/len_std.jpg",
+			"js/jQuery-2.2.1.min.js"
+		]
+	}
+}
