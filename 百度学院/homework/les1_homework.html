@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="lib/three.js"></script>
+    </head>
+    <body onload="init()">
+         <canvas id="mainCanvas" width="400px" height="300px"></canvas>
+    </body>
+    <script>
+       function init(){
+           var renderer = new THREE.WebGLRenderer({
+                canvas: document.getElementById('mainCanvas')
+           });
+           renderer.setClearColor(0x808080)
+           var scene = new THREE.Scene();
+           var camera = new THREE.OrthographicCamera(-2.5,2.5,1.875,-1.875,0.1,100);
+           camera.position.set(5,10,17);
+           camera.lookAt(new THREE.Vector3(0,0,0))
+           scene.add(camera);
+
+           //light
+           var light = new THREE.DirectionalLight(0xffffff)
+           light.position.set(4,5,3);
+           scene.add(light);
+
+           var material = new THREE.MeshLambertMaterial({
+                   color:0xffff00
+           });
+           var geometry = new THREE.CubeGeometry(1.7,2,5);
+           var mesh = new THREE.Mesh(geometry,material);
+           mesh.rotation.y = - Math.PI/24;
+           mesh.scale.set(0.8,0.8,0.8)
+           scene.add(mesh);
+
+           var torus = new THREE.Mesh(new THREE.TorusGeometry(1.8,0.5,10,24),new THREE.MeshPhongMaterial({
+                   color:0xffffff,
+                   specular:0xffff00,
+                   shininess:100
+              })
+           );
+           torus.rotation.y = Math.PI/27*12;
+           torus.scale.set(0.2,0.2,0.2)
+           torus.position.set(0.61,-0.7,0.9)
+           scene.add(torus);
+
+           var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1.8,0.5,10,28),new THREE.MeshPhongMaterial({
+                   color:0xffffff,
+                   specular:0xffff00,
+                   shininess:100
+              })
+           );
+           torus2.rotation.y = Math.PI/27*12;
+           torus2.scale.set(0.2,0.2,0.2)
+           torus2.position.set(0.86,-0.7,-1.1)
+           scene.add(torus2);
+           renderer.render(scene,camera);
+       }
+    </script>
+</html>
