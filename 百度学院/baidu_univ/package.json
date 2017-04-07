@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "install": "^0.8.7",
+    "three.js": "^0.77.1"
+  }
+}
